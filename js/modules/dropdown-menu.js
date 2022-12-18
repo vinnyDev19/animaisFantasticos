@@ -8,7 +8,7 @@ export default function initDropdownMenu() {
   });
   function handleClick(event) {
     event.preventDefault();
-    this.classList.add("active");
+    this.classList.toggle("active");
     outsideClick(this, ["click", "touchstart"], () => {
       this.classList.remove("active");
     });
